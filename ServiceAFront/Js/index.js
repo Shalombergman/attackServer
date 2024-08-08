@@ -29,6 +29,7 @@ const JsonDataList = async () => {
     
 
 
+let i = 0;
 
 
 const  jsonFilePath =  '/ServiceAFront/Html/missiles.json';
@@ -36,7 +37,8 @@ const socket = new WebSocket('ws://localhost:3108/MissileHandler');
 
 async function publishMessage () {
     const missiles =await loadMissilesJson();
-  socket.send(JSON.stringify(missiles));
+  socket.send(JSON.stringify(missiles[i]));
+  i++;
 }
 
 
