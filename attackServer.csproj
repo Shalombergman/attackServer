@@ -74,7 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ServerBeckend\Missels.cs" />
+    <Compile Include="ServerBeckend\Missile.cs" />
     <Compile Include="ServerBeckend\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerBeckend\MissileHandler.cs" />

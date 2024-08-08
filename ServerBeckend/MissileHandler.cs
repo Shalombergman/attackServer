@@ -7,7 +7,7 @@ using WebSocketSharp.Server;
 
 namespace attackServer.ServerBeckend
 {
-    internal class MissileHandler
+    internal class MissileHandler: WebSocketBehavior
     {
         private readonly WebSocketServer _wss;
         public MissileHandler(WebSocketServer wss)
@@ -17,6 +17,8 @@ namespace attackServer.ServerBeckend
         protected override void OnMessage(MessageEventArgs e)
         {
             Console.WriteLine("data got is: " + e.Data);
+            Missile missile = JsonSerializer.Deserialize<Missile>(e.Data);
+
         }
     }
 }

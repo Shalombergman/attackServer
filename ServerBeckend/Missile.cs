@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace attackServer
 {
-    internal class Missels
+    internal class Missile
     {
         private string _name { get; set; }
         private int? _masa { get; set; }
@@ -14,10 +14,9 @@ namespace attackServer
         private int ? _time { get; set; }
         private int? _damage { get; set; }
 
-        private int[] _origin { get; set; } = new int[3];
+        private Dictionary<string, int> _origin { get; set; }
 
-        private int[] _angle { get; set; } = new int[3];
-
+        private Dictionary <string, int> _angle { get; set; }
 
 
         public string getName()
@@ -40,11 +39,11 @@ namespace attackServer
         {
             return (int)this._damage;
         }
-        public int[] getOrigin() 
+        public Dictionary<string, int> getOrigin() 
         {
                 return this._origin;
         }
-        public int[] getAngle()
+        public Dictionary<string, int> getAngle()
         {
             return this._angle;
         }
@@ -68,11 +67,11 @@ namespace attackServer
         {
             this._damage = damage;
         }
-        public void setOrigin(int[] origin)
+        public void setOrigin(Dictionary<string, int> origin)
         {
             this._origin = origin;
         }
-        public void setAngle(int[] angle)
+        public void setAngle(Dictionary<string, int> angle)
         { 
             this._angle = angle;
         }

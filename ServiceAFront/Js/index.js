@@ -1,4 +1,5 @@
 
+
 const misseles = []
 const addMissile = () => {      
     const missilesDiv = document.getElementById("missiles-div")
@@ -11,19 +12,32 @@ let missiles;
 const loadMissilesJson = async() => {
     const response = await fetch(jsonFilePath);
     const jsonData = await response.json();    
-    //console.log(`result is : ${JSON.stringify(jsonDataList)}`)
+    console.log(`result is : ${JSON.stringify(jsonData)}`)
     return jsonData;
     
 }
-var jsonData = await loadMissilesJson();
-var jsonDataList = [];
+
+
+const JsonDataList = async () => {
+    const jsonData = await loadMissilesJson();
+    const jsonArray = await JSON.parse(jsonData);
+    console.log (jsonArray);
+}
+
 
 
     
 
-console.log(jsonDataList);
+
+
 
 const  jsonFilePath =  '/ServiceAFront/Html/missiles.json';
+const socket = new WebSocket('ws://localhost:3108/MissileHandler');
+
+async function publishMessage () {
+    const missiles =await loadMissilesJson();
+  socket.send(JSON.stringify(missiles));
+}
 
 
 //const missels = JSON.parse(misselsJson)

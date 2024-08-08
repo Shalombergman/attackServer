@@ -6,23 +6,30 @@
     <title>Attack Server</title>
     <link rel="stylesheet" href="/ServiceAFront/Css/index.css">
 </head>
-<script src="/ServiceAFront/Js/index.js"></script>
 <body>
-
+    <script src="../Js/index.js"></script>
+    
     <h1 class="main-headline">Attack Server</h1>
-   <div id="missiles-div" class="addMissile">
-
-
-   </div>
-   <button onclick="fetchJSONData()">
+    <div id="missiles-div" class="addMissile">
+        
+        
+    </div>
+    <button onclick="fetchJSONData()">
         fetchJSONData
-   </button>
-   <button onclick="addMissile()">
-    Add
-   </button>
-   <button onclick="loadMissilesJson()">
+    </button>
+    <button onclick="addMissile()">
+        Add
+    </button>
+    <button onclick="loadMissilesJson()">
         Load
     </button>
+    <button id="publish" onclick="publishMessage()">
+        publish
+    </button>
+    <button onclick="JsonDataList()">
+        List Missiles
+    </button>
+    
     <p></p>
     
 </body>
