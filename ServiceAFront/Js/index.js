@@ -1,6 +1,6 @@
 
  
-const  jsonFilePath =  '/Users/shalom_bergman/kodcode2/IronDomeProject/attackServer/missiles.json';
+const  jsonFilePath =  '/Users/shalom_bergman/kodcode2/IronDomeProject/attackServer/ServerBeckend/missiles.json';
 
 
 //const missels = JSON.parse(misselsJson)
