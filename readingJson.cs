@@ -18,7 +18,7 @@ namespace attackServer
     {
         static string  filePathToRead = "../../missiles.json";
 
-        public static async Task<string> ReadJsonFile()
+        public static async Task<string> ReadJsonFileAsync()
         {
             string jsonContent =await Task.Run(() => File.ReadAllText(filePathToRead));          
             return jsonContent;
